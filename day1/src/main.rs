@@ -16,7 +16,6 @@ fn main() {
             // record elf calories if max
             if elf_cal > max_cal {
                 max_cal = elf_cal;
-                println!("New max cal {}", max_cal)
             }
             // reset elf calories
             elf_cal = 0;
@@ -28,7 +27,7 @@ fn main() {
         elf_cal += cal;
     }
 
-    println!("\n\n{}", max_cal);
+    println!("{}", max_cal);
 
     // PART 2
 
@@ -46,7 +45,6 @@ fn main() {
                 let (i, cal): (usize, i32) = max_cal;
                 if elf_cal > cal {
                     max_cals[i] = elf_cal;
-                    println!("New max cals {:?}", max_cals);
                     break;
                 }
             }
@@ -60,5 +58,5 @@ fn main() {
         elf_cal += cal;
     }
 
-    println!("\n\n{}", max_cals[0] + max_cals[1] + max_cals[2]);
+    println!("{}", max_cals[0] + max_cals[1] + max_cals[2]);
 }
